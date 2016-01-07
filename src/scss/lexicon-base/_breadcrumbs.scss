@@ -1,12 +1,12 @@
 .breadcrumb {
-	padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal 3px;
+	padding: $breadcrumb-padding-y $breadcrumb-padding-x 3px;
 
 	> li {
 		max-width: 150px;
 
-		@include text-overflow;
+		@include text-truncate;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media screen and (min-width: breakpoint-min(md)) {
 			max-width: 300px;
 		}
 
@@ -15,7 +15,7 @@
 		}
 
 		+ li:before {
-			content: "#{$breadcrumb-separator}"+"\00a0";
+			content: "#{$breadcrumb-divider}"+"\00a0";
 		}
 	}
 }
@@ -27,13 +27,13 @@
 		word-wrap: break-word;
 
 		&:before {
-			color: $breadcrumb-color;
+			color: $breadcrumb-divider-color;
 		}
 	}
 
 	> li:before,
 	> li + li:before {
-		content: $breadcrumb-vertical-separator;
+		content: $breadcrumb-vertical-divider;
 		padding: 0;
 	}
 }
