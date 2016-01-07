@@ -1,3 +1,6 @@
+$grid-float-breakpoint: map-get($grid-breakpoints, md);
+$screen-sm-min: map-get($grid-breakpoints, sm);
+
 header.row {
 	margin: 0;
 }
@@ -724,7 +727,7 @@ $mainNavWidth: 220px;
 // Main Nav Skin
 
 #mainNav {
-	padding-top: $line-height-computed - nth($nav-link-padding, 1);
+	padding-top: $line-height - nth($nav-link-padding, 1);
 	z-index: 1;
 
 	li {
