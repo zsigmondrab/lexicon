@@ -34,7 +34,7 @@
 	}
 }
 
-@media screen and (max-width: $grid-float-breakpoint-max) {
+@media screen and (max-width: breakpoint-max(sm)) {
 	.nav-tabs-scrollbar {
 		$anim-key-frames: dropHeader 0.5s $ease-out-quint, removeBorder 0.75s $ease-out-quint;
 		$anim-delay: 0s, 0.45s;
@@ -82,7 +82,7 @@
 		&.open {
 			display: block;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@media screen and (min-width: breakpoint-min(md)) {
 				display: none;
 			}
 		}
@@ -91,7 +91,7 @@
 	.open > .dropdown-menu {
 		display: none;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media screen and (min-width: breakpoint-min(md)) {
 			display: block;
 		}
 	}
@@ -101,7 +101,7 @@
 	.nav {
 		float: left;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media screen and (min-width: breakpoint-min(md)) {
 			float: none;
 		}
 	}
@@ -128,7 +128,7 @@
 				margin-left: 2px;
 				margin-right: 0;
 
-				@include text-overflow();
+				@include text-truncate;
 			}
 
 			> .dropdown-menu {
@@ -196,7 +196,7 @@
 	}
 }
 
-@media screen and (max-width: $grid-float-breakpoint-max) {
+@media screen and (max-width: breakpoint-max(sm)) {
 	.nav-tabs-scroll .nav-tabs-default {
 		> li {
 			&:first-child > a {

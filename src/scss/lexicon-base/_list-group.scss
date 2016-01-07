@@ -1,6 +1,6 @@
 .list-group-heading {
 	background-color: $list-group-bg;
-	border: 1px solid $list-group-border;
+	border: 1px solid $list-group-border-color;
 	display: block;
 	font-weight: $list-group-header-font-weight;
 	margin-bottom: -1px;
@@ -124,7 +124,7 @@ button.list-group-heading,
 		&:first-child {
 			.list-group-item-content,
 			.list-group-item-field {
-				border-top: $tabular-list-group-border-width solid $list-group-border;
+				border-top: $tabular-list-group-border-width solid $list-group-border-color;
 			}
 		}
 	}
@@ -141,7 +141,7 @@ button.list-group-heading,
 
 	.list-group-item-content,
 	.list-group-item-field {
-		border: $tabular-list-group-border-width solid $list-group-border;
+		border: $tabular-list-group-border-width solid $list-group-border-color;
 		border-left-width: 0;
 		border-right-width: 0;
 		border-top-width: 0;
@@ -224,7 +224,7 @@ button.list-group-heading,
 
 // min width 992px
 
-@media (min-width: $screen-md-min) {
+@media (min-width: breakpoint-min(lg)) {
 	.tabular-list-group {
 		.list-group-item-content,
 		.list-group-item-field {
@@ -262,7 +262,7 @@ button.list-group-heading,
 			padding-left: 12px;
 			padding-right: 16px;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@media screen and (min-width: breakpoint-min(md)) {
 				border-left-width: 0;
 			}
 		}
@@ -277,7 +277,7 @@ button.list-group-heading,
 	.list-group-item-field {
 		vertical-align: middle;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media screen and (min-width: breakpoint-min(md)) {
 			vertical-align: top;
 		}
 	}
@@ -291,7 +291,7 @@ button.list-group-heading,
 		font-size: 16px;
 		vertical-align: middle;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media screen and (min-width: breakpoint-min(md)) {
 			content: normal;
 		}
 	}
@@ -304,13 +304,13 @@ button.list-group-heading,
 
 	> [class^="icon-"],
 	> [class*=" icon-"] {
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media screen and (min-width: breakpoint-min(md)) {
 			display: inline;
 		}
 	}
 
 	> .user-icon {
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media screen and (min-width: breakpoint-min(md)) {
 			display: block;
 		}
 	}
@@ -319,7 +319,7 @@ button.list-group-heading,
 .detailed-list-view-icon {
 	@include monospace(34px);
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media screen and (min-width: breakpoint-min(md)) {
 		@include monospace(48px);
 	}
 
@@ -327,7 +327,7 @@ button.list-group-heading,
 	[class*=" icon-"] {
 		font-size: 28px;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media screen and (min-width: breakpoint-min(md)) {
 			font-size: 38px;
 		}
 	}
@@ -368,7 +368,7 @@ button.list-group-heading,
 	}
 
 	.card {
-		border-color: $list-group-border;
+		border-color: $list-group-border-color;
 		border-radius: 0;
 		border-width: 1px;
 		box-shadow: none;
@@ -396,7 +396,7 @@ button.list-group-heading,
 	.list-group-card-icon {
 		font-size: 2.4em;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media screen and (min-width: breakpoint-min(md)) {
 			font-size: 3em;
 		}
 
@@ -409,7 +409,7 @@ button.list-group-heading,
 
 			text-align: center;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@media screen and (min-width: breakpoint-min(md)) {
 				@include monospace(45px);
 			}
 		}
@@ -434,7 +434,7 @@ button.list-group-heading,
 	.checkbox input[type="checkbox"] {
 		display: none;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media screen and (min-width: breakpoint-min(md)) {
 			display: block;
 		}
 
@@ -451,7 +451,7 @@ button.list-group-heading,
 				text-align: center;
 				vertical-align: middle;
 
-				@media screen and (min-width: $grid-float-breakpoint) {
+				@media screen and (min-width: breakpoint-min(md)) {
 					content: normal;
 				}
 			}
@@ -464,13 +464,13 @@ button.list-group-heading,
 
 			> [class^="icon-"],
 			> [class*=" icon-"] {
-				@media screen and (min-width: $grid-float-breakpoint) {
+				@media screen and (min-width: breakpoint-min(md)) {
 					display: block;
 				}
 			}
 
 			> .user-icon {
-				@media screen and (min-width: $grid-float-breakpoint) {
+				@media screen and (min-width: breakpoint-min(md)) {
 					display: block;
 				}
 			}
@@ -481,13 +481,13 @@ button.list-group-heading,
 	.checkbox-middle-left,
 	.checkbox-top-left {
 		.card.flex-container {
-			@media screen and (max-width: $grid-float-breakpoint-max) {
+			@media screen and (max-width: breakpoint-max(sm)) {
 				padding-left: 20px;
 			}
 		}
 
 		.card-row {
-			@media screen and (max-width: $grid-float-breakpoint-max) {
+			@media screen and (max-width: breakpoint-max(sm)) {
 				padding-left: 20px;
 			}
 		}
@@ -497,13 +497,13 @@ button.list-group-heading,
 	.checkbox-middle-right,
 	.checkbox-top-right {
 		.card.flex-container {
-			@media screen and (max-width: $grid-float-breakpoint-max) {
+			@media screen and (max-width: breakpoint-max(sm)) {
 				padding-right: 20px;
 			}
 		}
 
 		.card-row {
-			@media screen and (max-width: $grid-float-breakpoint-max) {
+			@media screen and (max-width: breakpoint-max(sm)) {
 				padding-right: 20px;
 			}
 		}
