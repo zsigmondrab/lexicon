@@ -99,14 +99,14 @@ a .icon-monospaced,
 
 .collapse-icon {
 	display: block;
-	padding-right: $padding-base-horizontal * 2;
+	padding-right: $collapse-icon-padding-x * 2;
 	position: relative;
 
 	&:before {
 		content: $collapse-icon-open;
 		font-family: $collapse-icon-font-family;
 		position: absolute;
-		right: $padding-base-horizontal;
+		right: $collapse-icon-padding-x;
 	}
 
 	&.collapsed:before {
