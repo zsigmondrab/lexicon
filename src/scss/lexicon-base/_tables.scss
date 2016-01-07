@@ -37,7 +37,7 @@
 
 // max-width: 767px
 
-@media screen and (max-width: $grid-float-breakpoint-max) {
+@media screen and (max-width: breakpoint-max(sm)) {
 	.table-responsive-flip {
 		.table {
 			> thead,
@@ -64,7 +64,7 @@
 
 // max-width: 767px
 
-@media screen and (max-width: $grid-float-breakpoint-max) {
+@media screen and (max-width: breakpoint-max(sm)) {
 	.table-responsive-collapse {
 		.table,
 		thead,
@@ -192,9 +192,9 @@
 	}
 }
 
-// max-width: 479px
+// max-width: 543px
 
-@media screen and (max-width: ($screen-xs-min - 1)) {
+@media screen and (max-width: breakpoint-max(xs)) {
 	.table-responsive-flip {
 		.table {
 			> thead {
