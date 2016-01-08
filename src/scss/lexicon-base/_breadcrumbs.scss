@@ -1,5 +1,5 @@
 .breadcrumb {
-	padding: $breadcrumb-padding-y $breadcrumb-padding-x 3px;
+	padding: $breadcrumb-padding-y $breadcrumb-padding-x;
 
 	> li {
 		max-width: 150px;
@@ -21,8 +21,9 @@
 }
 
 .breadcrumb-vertical {
-	> li {
+	.breadcrumb-item {
 		display: block;
+		float: none;
 		max-width: none;
 		word-wrap: break-word;
 
@@ -31,8 +32,7 @@
 		}
 	}
 
-	> li:before,
-	> li + li:before {
+	.breadcrumb-item:before {
 		content: $breadcrumb-vertical-divider;
 		padding: 0;
 	}

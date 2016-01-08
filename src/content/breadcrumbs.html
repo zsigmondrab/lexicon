@@ -3,31 +3,39 @@ title: Breadcrumbs
 section: Elements
 ---
 
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<blockquote class="blockquote blockquote-danger">
+			<p>Bootstrap 4 now uses <code>.breadcrumb-item</code> instead of <code>.breadcrumb > li</code> to style breadcrumb links.</p>
+		</blockquote>
+	</div>
+</div>
+
 <div class="row uxgl-breadcrumbs">
 	<div class="col-md-12">
 		<h3>Horizontal Breadcrumbs</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>A navigation aid for your site, provide a quick way to jump back to previously viewed pages or sections.</p>
 		</blockquote>
 
 		<ul class="breadcrumb">
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#" title="Home">Home</a>
 			</li>
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#" title="Components">Components</a>
 			</li>
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#" title="Breadcrumbs and Paginations">Breadcrumbs and Paginations</a>
 			</li>
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#" title="Page">Page</a>
 			</li>
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
 			</li>
-			<li class="active">
+			<li class="active breadcrumb-item">
 				<span title="Active">Active</span>
 			</li>
 		</ul>
@@ -37,11 +45,11 @@ section: Elements
 </div>
 <div class="collapse" id="codeCollapse0">
 	<pre><code class="html">```<ul class="breadcrumb">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Components</a></li>
-    <li><a href="#">Breadcrumbs and Paginations</a></li>
-    <li><a href="#">Page</a></li>
-    <li class="active">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Components</a></li>
+    <li class="breadcrumb-item"><a href="#">Breadcrumbs and Paginations</a></li>
+    <li class="breadcrumb-item"><a href="#">Page</a></li>
+    <li class="active breadcrumb-item">
         <span>Active</span>
     </li>
 </ul>```</code></pre>
@@ -54,29 +62,56 @@ section: Elements
 	<div class="col-md-12">
 		<h3>Vertical Breadcrumbs</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>Add class <code>breadcrumb-vertical</code> to breadcrumb to stack it vertically.</p>
 		</blockquote>
 
 		<ul class="breadcrumb breadcrumb-vertical">
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#" title="Home">Home</a>
 			</li>
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#" title="Components">Components</a>
 			</li>
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#" title="Breadcrumbs and Paginations">Breadcrumbs and Paginations</a>
 			</li>
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#" title="Page">Page</a>
 			</li>
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
 			</li>
-			<li class="active">
+			<li class="active breadcrumb-item">
 				<span>Active</span>
 			</li>
 		</ul>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse1">
+	<pre><code class="html">```<ul class="breadcrumb breadcrumb-vertical">
+    <li class="breadcrumb-item">
+        <a href="#" title="Home">Home</a>
+    </li>
+    <li class="breadcrumb-item">
+        <a href="#" title="Components">Components</a>
+    </li>
+    <li class="breadcrumb-item">
+        <a href="#" title="Breadcrumbs and Paginations">Breadcrumbs and Paginations</a>
+    </li>
+    <li class="breadcrumb-item">
+        <a href="#" title="Page">Page</a>
+    </li>
+    <li class="breadcrumb-item">
+        <a href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
+    </li>
+    <li class="active breadcrumb-item">
+        <span>Active</span>
+    </li>
+</ul>```</code></pre>
+</div>
+
 	</div>
 </div>
