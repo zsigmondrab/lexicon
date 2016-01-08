@@ -5,15 +5,23 @@ section: Elements
 
 <div class="row row-spacing">
 	<div class="col-md-12">
+		<blockquote class="blockquote blockquote-danger">
+			<p>Bootstrap 4 replaces <code>img-responsive</code> with <code>img-fluid</code>.</p>
+		</blockquote>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
 		<h3>Responsive Image</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use <code>.img-responsive</code> to make an image shrink with its container.</p>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>Use class <code>img-fluid</code> to make an image shrink with its container.</p>
 		</blockquote>
 	</div>
 
 	<div class="col-md-3">
-		<img alt="responsive image" class="img-responsive" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+		<img alt="responsive image" class="img-fluid" src="{{rootPath}}/images/thumbnail_placeholder.gif">
 	</div>
 
 	<div class="col-md-12">
@@ -22,7 +30,7 @@ section: Elements
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse0">
-	<pre><code class="html">```<img alt="..." class="img-responsive" src="...">```</code></pre>
+	<pre><code class="html">```<img alt="..." class="img-fluid" src="...">```</code></pre>
 </div>
 
 	</div>
@@ -32,21 +40,21 @@ section: Elements
 	<div class="col-md-12">
 		<h3>Image Shapes</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>Use <code>.img-rounded</code>, <code>.img-circle</code>, or <code>.img-thumbnail</code> on <code>```<img>```</code> to quickly style the borders.</p>
 		</blockquote>
 	</div>
 
 	<div class="col-xs-4">
-		<img alt="responsive image with rouded edges" class="img-responsive img-rounded" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+		<img alt="responsive image with rouded edges" class="img-fluid img-rounded" src="{{rootPath}}/images/thumbnail_placeholder.gif">
 	</div>
 
 	<div class="col-xs-4">
-		<img alt="responsive circle image" class="img-circle img-responsive" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+		<img alt="responsive circle image" class="img-circle img-fluid" src="{{rootPath}}/images/thumbnail_placeholder.gif">
 	</div>
 
 	<div class="col-xs-4">
-		<img alt="responsive thumbnail image" class="img-thumbnail img-responsive" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+		<img alt="responsive thumbnail image" class="img-thumbnail img-fluid" src="{{rootPath}}/images/thumbnail_placeholder.gif">
 	</div>
 
 
@@ -68,7 +76,7 @@ section: Elements
 	<div class="col-md-12">
 		<h3>Image Aspect Ratios</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>Sometimes you can't control the size of an image, define a specific size for your images with aspect-ratios. The base class <code>aspect-ratio</code> maintains a 1 to 1 ratio relative to its container's width, add class <code>aspect-ratio-vertical</code> to maintain a 1 to 1 ratio relative to its container's height.</p>
 
 			<p>Use <code>aspect-ratio-3-to-2</code>, <code>aspect-ratio-4-to-3</code>, <code>aspect-ratio-8-to-5</code>, or <code>aspect-ratio-16-to-9</code> to maintain the specific ratio relative to its container or create your own by setting <code>padding-bottom</code> to the ratio you want e.g. 2 to 1 <code>.aspect-ratio-2-to-1 { padding-bottom: 50% }</code>.</p>
@@ -242,7 +250,7 @@ section: Elements
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>Images inside <code>aspect-ratio</code> are aligned bottom by default. Use class <code>aspect-ratio-top</code> or <code>aspect-ratio-middle</code> to align top or vertically center, respectively.</p>
 		</blockquote>
 	</div>
@@ -287,7 +295,7 @@ section: Elements
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>Images inside <code>aspect-ratio-vertical</code> are aligned left by default. Use class <code>aspect-ratio-right</code> or <code>aspect-ratio-center</code> to align right or horizontally center, respectively.</p>
 		</blockquote>
 	</div>
@@ -313,7 +321,7 @@ section: Elements
 	<div class="col-md-12">
 		<h3>Crop Img</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>Use the component <code>crop-img</code> to crop an image based on its container size, the container's position must be set to relative, absolute, or fixed, or set width and height on <code>crop-img</code> directly.</p>
 		</blockquote>
 
@@ -327,7 +335,7 @@ section: Elements
 	<div class="col-md-12">
 		<h3>Horizontal Crop Img Alignment</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>Horizontally align the image inside crop-img with classes <code>crop-img-center</code> and <code>crop-img-right</code>, default alignment is to the left.</p>
 		</blockquote>
 	</div>
@@ -358,7 +366,7 @@ section: Elements
 	<div class="col-md-12">
 		<h3>Vertical Crop Img Alignment</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>Vertically align the image inside crop-img with classes <code>crop-img-middle</code> and <code>crop-img-bottom</code>, default alignment is to the top.</p>
 		</blockquote>
 	</div>
