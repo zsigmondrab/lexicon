@@ -1,3 +1,9 @@
+@if not $dropdown-toggle-caret {
+	.dropdown-toggle:after {
+		border-width: 0;
+	}
+}
+
 .dropdown-menu form {
 	.checkbox,
 	.radio,
@@ -230,8 +236,8 @@
 
 	.link-list-heading {
 		display: block;
-		font-size: $font-size-small;
-		line-height: $line-height-base;
+		font-size: $font-size-sm;
+		line-height: $line-height;
 		padding: 3px 20px;
 		white-space: nowrap;
 	}
@@ -243,7 +249,7 @@
 		padding: 5px 0;
 		width: 100%;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media screen and (min-width: breakpoint-min(md)) {
 			padding: 20px 0;
 			width: 100%;
 		}
@@ -251,7 +257,7 @@
 		[class*="col-sm"],
 		[class*="col-md"],
 		[class*="col-lg"] {
-			@media screen and (max-width: $grid-float-breakpoint-max) { // max-width: 767px
+			@media screen and (max-width: breakpoint-max(sm)) { // max-width: 767px
 				padding: 0;
 			}
 		}
@@ -274,11 +280,11 @@
 
 .dropdown-wide {
 	.dropdown-menu {
-		@media screen and (min-width: $screen-md-min) { // min-width 992px
+		@media screen and (min-width: breakpoint-min(lg)) { // min-width 992px
 			min-width: $dropdown-wide-width;
 		}
 
-		@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { // between 768px and 991px
+		@media screen and (min-width: breakpoint-min(md)) and (max-width: breakpoint-max(md)) { // between 768px and 991px
 			&:after,
 			&:before {
 				border-bottom-width: 0;
@@ -289,7 +295,7 @@
 
 .dropdown-wide,
 .nav > li.dropdown-wide {
-	@media screen and (min-width: $screen-md-min) {
+	@media screen and (min-width: breakpoint-min(lg)) { // min-width: 992px
 		position: relative;
 	}
 }
@@ -307,8 +313,8 @@
 		> .dropdown-menu-top,
 		> .dropdown-menu-top-center,
 		> .dropdown-menu-top-right {
-			border-top-right-radius: $border-radius-base;
-			border-top-left-radius: $border-radius-base;
+			border-top-right-radius: $border-radius;
+			border-top-left-radius: $border-radius;
 		}
 	}
 
@@ -316,7 +322,7 @@
 	.dropdown-menu-left-side-middle,
 	.dropdown-menu-right-side-middle,
 	.dropdown-menu-top-center {
-		@media screen and (max-width: $grid-float-breakpoint-max) {
+		@media screen and (max-width: breakpoint-max(sm)) {
 			@include transform(none);
 		}
 	}

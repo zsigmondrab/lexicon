@@ -367,6 +367,10 @@ body.fixed {
 
 // Dropdowns Page
 
+.lexicon-base .removing-dropdown-arrow {
+	display: none;
+}
+
 .uxgl-dropdown-display {
 	.dropdown-menu {
 		display: block;
