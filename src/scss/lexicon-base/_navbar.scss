@@ -1,10 +1,11 @@
 .basic-search {
 	float: right;
 	max-width: none;
-	padding: floor(($navbar-height - $input-height-base) / 2) $navbar-padding-horizontal;
+	padding: $navbar-padding-y $navbar-padding-x;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media screen and (min-width: breakpoint-min(md)) {
 		max-width: 220px;
+		padding: 0;
 	}
 
 	&.open {
@@ -20,10 +21,10 @@
 	}
 
 	button[type='submit'].btn {
-		border-bottom-left-radius: $btn-border-radius-base;
-		border-top-left-radius: $btn-border-radius-base;
+		border-bottom-left-radius: $btn-border-radius;
+		border-top-left-radius: $btn-border-radius;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media screen and (min-width: breakpoint-min(md)) {
 			border-bottom-left-radius: 0;
 			border-top-left-radius: 0;
 		}
@@ -51,7 +52,7 @@
 	left: 101%;
 	position: relative;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media screen and (min-width: breakpoint-max(sm)) {
 		left: 0;
 	}
 
@@ -74,7 +75,7 @@
 			outline: none;
 		}
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media screen and (min-width: breakpoint-max(sm)) {
 			display: none;
 			line-height: normal;
 		}
@@ -100,33 +101,12 @@
 	}
 }
 
-// Bootstrap Navbar Overrides
-
-.navbar-brand:focus {
-	position: relative;
-	z-index: 1;
-}
-
-.navbar-collapse-left {
-	@media screen and (min-width: $grid-float-breakpoint) {
-		float: left;
-	}
-}
-
 // Navbar Collapse Basic Search Styles
 
 .collapse-basic-search {
 	position: relative;
 
-	//min-width: 768px
-
-	@media screen and (min-width: $grid-float-breakpoint) {
-		&.navbar-no-collapse {
-			.navbar-nav:first-child {
-				float: left;
-			}
-		}
-
+	@media screen and (min-width: breakpoint-min(md)) {
 		.basic-search-autofit {
 			float: none;
 			max-width: none;
@@ -142,7 +122,7 @@
 		right: 0;
 		top: 0;
 
-		@media screen and (min-width: $grid-float-breakpoint) { //min-width: 768px
+		@media screen and (min-width: breakpoint-min(md)) { //min-width: 768px
 			position: static;
 		}
 
@@ -154,7 +134,7 @@
 		}
 
 		&.open .basic-search-close {
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@media screen and (min-width: breakpoint-min(md)) {
 				display: none;
 			}
 		}
@@ -163,13 +143,13 @@
 			overflow: hidden;
 			visibility: hidden;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@media screen and (min-width: breakpoint-min(md)) {
 				overflow: visible;
 				visibility: visible;
 			}
 
 			.form-control {
-				@media screen and (min-width: $grid-float-breakpoint) {
+				@media screen and (min-width: breakpoint-min(md)) {
 					left: auto;
 				}
 			}
@@ -178,203 +158,41 @@
 		.form-control {
 			padding-left: 40px;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@media screen and (min-width: breakpoint-min(md)) {
 				padding-left: 5px;
 			}
 		}
 	}
 
-	.navbar-nav:first-child {
-		float: none;
-
-		@media screen and (min-width: $grid-float-breakpoint) {
-			float: left;
-		}
-	}
-
-	.navbar-nav > li > a,
-	.navbar-toggle {
+	.navbar-toggler,
+	.nav-item {
+		position: relative;
 		z-index: 1;
 	}
 }
 
-/*	make navbar dropdown position absolute
-	lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
+// Navbar Helper Classes
 
-.navbar {
-	.navbar-collapse-absolute {
+.navbar-nav-left {
+	float: left;
+}
+
+.navbar-nav-right {
+	float: right;
+}
+
+// Make navbar-toggleable-xs position absolute
+
+.navbar-toggleable-xs-absolute {
+	@media screen and (max-width: breakpoint-max(xs)) { // max-width: 543px
 		left: -1px;
+		padding-left: $navbar-padding-x;
+		padding-right: $navbar-padding-x;
 		position: absolute;
 		right: -1px;
 		top: 100%;
 		z-index: $zindex-navbar;
 	}
-
-	.navbar-collapse {
-		@media screen and (min-width: $grid-float-breakpoint) {
-			background-color: transparent;
-			border-width: 0;
-			left: auto;
-			position: static;
-			right: auto;
-			top: auto;
-			z-index: 0;
-		}
-
-		&:first-child {
-			@media screen and (min-width: $grid-float-breakpoint) {
-				background-color: transparent;
-				border-width: 0;
-				float: left;
-				left: auto;
-				position: static;
-				right: auto;
-				top: auto;
-				z-index: 0;
-			}
-		}
-
-		+ .navbar-header {
-			.basic-search {
-				@media screen and (min-width: $grid-float-breakpoint) {
-					width: auto;
-				}
-			}
-		}
-	}
-}
-
-// Navbar Form
-
-.navbar-form {
-	margin-bottom: floor(($navbar-height - $input-height-base) / 2);
-	margin-top: floor(($navbar-height - $input-height-base) / 2);
-
-	@media screen and (min-width: $grid-float-breakpoint) {
-		margin: 0;
-		padding: floor(($navbar-height - $input-height-base) / 2) 0;
-	}
-
-	.btn {
-		@media screen and (min-width: $grid-float-breakpoint) {
-			vertical-align: top;
-		}
-	}
-
-	.form-group {
-		@media screen and (min-width: $grid-float-breakpoint) {
-			display: inline-block;
-			margin-bottom: 0;
-		}
-	}
-}
-
-.navbar-header .input-group-input .form-control {
-	@media screen and (min-width: $grid-float-breakpoint) {
-		max-width: none;
-		min-width: 0;
-	}
-}
-
-.navbar-header-left-xs {
-	@media screen and (max-width: $grid-float-breakpoint-max) {
-		float: left;
-	}
-}
-
-.navbar-header-right-xs {
-	@media screen and (max-width: $grid-float-breakpoint-max) {
-		float: right;
-	}
-}
-
-.navbar-header-right {
-	@media screen and (min-width: $grid-float-breakpoint) {
-		float: right;
-	}
-}
-
-.navbar-header .navbar-form,
-.navbar-no-collapse .navbar-form {
-	border-width: 0;
-	margin: 0;
-	padding: floor(($navbar-height - $input-height-base) / 2) $navbar-padding-horizontal;
-}
-
-.navbar-nav {
-	@media screen and (min-width: $grid-float-breakpoint) {
-		margin-right: $navbar-padding-horizontal;
-	}
-
-	&.navbar-right {
-		@media screen and (min-width: $grid-float-breakpoint) {
-			margin-left: $navbar-padding-horizontal;
-			margin-right: 0;
-		}
-
-		&:last-child {
-			@media screen and (min-width: $grid-float-breakpoint) {
-				margin-right: 0;
-			}
-		}
-	}
-
-	> li > a {
-		padding-left: $navbar-padding-horizontal;
-		padding-right: $navbar-padding-horizontal;
-	}
-}
-
-// Navbar No Collapse
-
-.navbar-no-collapse .navbar-nav {
-	float: left;
-	margin: 0 $navbar-padding-horizontal;
-
-	> li {
-		float: left;
-		margin-left: -1px;
-
-		&:first-child {
-			border-left-width: 0;
-			margin-left: 0;
-		}
-
-		&:last-child {
-			border-right-width: 0;
-		}
-
-		> a {
-			padding-bottom: $navbar-padding-vertical;
-			padding-top: $navbar-padding-vertical;
-		}
-	}
-
-	.dropdown-menu {
-		border: 1px solid $dropdown-border;
-		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-		position: absolute;
-	}
-}
-
-// Navbar Toggle
-
-.navbar-toggle,
-.navbar-toggle-left {
-	margin: floor(($navbar-height - $input-height-base) / 2) $navbar-padding-horizontal;
-	padding: $padding-base-vertical 10px;
-}
-
-.navbar-toggle:focus {
-	@include tab-focus;
-}
-
-.navbar-toggle .icon-bar {
-	width: 18px;
-}
-
-.navbar-toggle-left {
-	float: left;
 }
 
 .basic-search {
@@ -389,44 +207,30 @@
 
 // Skin
 
-.navbar-default {
-	.basic-search.open {
-		background-color: $navbar-default-bg;
-	}
-
-	.navbar-collapse:first-child,
-	.navbar-collapse-absolute {
-		background-color: $navbar-default-bg;
-		border: 1px solid $navbar-default-border;
-
-		@media screen and (min-width: $grid-float-breakpoint) {
-			border-width: 0;
-		}
-	}
-
-	.navbar-toggle,
-	.navbar-toggle-left {
-		color: $navbar-default-link-active-color;
-	}
+.bg-danger .navbar-toggleable-xs-absolute {
+	background-color: $brand-danger;
 }
 
-.navbar-inverse {
-	.basic-search.open {
-		background-color: $navbar-inverse-bg;
-	}
+.bg-faded .navbar-toggleable-xs-absolute {
+	background-color: $gray-lightest;
+}
 
-	.navbar-collapse:first-child,
-	.navbar-collapse-absolute {
-		background-color: $navbar-inverse-bg;
-		border: 1px solid $navbar-inverse-border;
+.bg-info .navbar-toggleable-xs-absolute {
+	background-color: $brand-info;
+}
 
-		@media screen and (min-width: $grid-float-breakpoint) {
-			border-width: 0;
-		}
-	}
+.bg-inverse .navbar-toggleable-xs-absolute {
+	background-color: $gray-dark;
+}
 
-	.navbar-toggle,
-	.navbar-toggle-left {
-		color: $navbar-inverse-link-active-color;
-	}
+.bg-primary .navbar-toggleable-xs-absolute {
+	background-color: $brand-primary;
+}
+
+.bg-success .navbar-toggleable-xs-absolute {
+	background-color: $brand-success;
+}
+
+.bg-warning .navbar-toggleable-xs-absolute {
+	background-color: $brand-warning;
 }
